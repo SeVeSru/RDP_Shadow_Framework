@@ -41,6 +41,8 @@ namespace RDP_Shadow_Framework
             this.AutoUpdate = new System.Windows.Forms.CheckBox();
             this.checkControl = new System.Windows.Forms.CheckBox();
             this.serverComboBox = new System.Windows.Forms.ComboBox();
+            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OfficePhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // sessionListView
@@ -49,14 +51,16 @@ namespace RDP_Shadow_Framework
             this.Username,
             this.SessionID,
             this.columnHeader1,
-            this.columnHeader2});
+            this.columnHeader2,
+            this.Email,
+            this.OfficePhone});
             this.sessionListView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.sessionListView.FullRowSelect = true;
             this.sessionListView.HideSelection = false;
             this.sessionListView.Location = new System.Drawing.Point(0, 0);
-            this.sessionListView.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.sessionListView.Margin = new System.Windows.Forms.Padding(0);
             this.sessionListView.Name = "sessionListView";
-            this.sessionListView.Size = new System.Drawing.Size(405, 703);
+            this.sessionListView.Size = new System.Drawing.Size(709, 703);
             this.sessionListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.sessionListView.TabIndex = 9;
             this.sessionListView.UseCompatibleStateImageBehavior = false;
@@ -75,7 +79,7 @@ namespace RDP_Shadow_Framework
             // 
             // columnHeader1
             // 
-            this.columnHeader1.DisplayIndex = 3;
+            this.columnHeader1.DisplayIndex = 5;
             this.columnHeader1.Text = "Активный";
             this.columnHeader1.Width = 0;
             // 
@@ -92,7 +96,7 @@ namespace RDP_Shadow_Framework
             this.refreshButton.Location = new System.Drawing.Point(0, 672);
             this.refreshButton.Margin = new System.Windows.Forms.Padding(4);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(405, 31);
+            this.refreshButton.Size = new System.Drawing.Size(709, 31);
             this.refreshButton.TabIndex = 10;
             this.refreshButton.Text = "Обновить (F5)";
             this.refreshButton.UseVisualStyleBackColor = true;
@@ -104,7 +108,7 @@ namespace RDP_Shadow_Framework
             this.shadowButton.Location = new System.Drawing.Point(0, 642);
             this.shadowButton.Margin = new System.Windows.Forms.Padding(4);
             this.shadowButton.Name = "shadowButton";
-            this.shadowButton.Size = new System.Drawing.Size(405, 30);
+            this.shadowButton.Size = new System.Drawing.Size(709, 30);
             this.shadowButton.TabIndex = 11;
             this.shadowButton.Text = "Подключится";
             this.shadowButton.UseVisualStyleBackColor = true;
@@ -117,7 +121,7 @@ namespace RDP_Shadow_Framework
             this.AutoUpdate.Location = new System.Drawing.Point(0, 604);
             this.AutoUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.AutoUpdate.Name = "AutoUpdate";
-            this.AutoUpdate.Size = new System.Drawing.Size(405, 19);
+            this.AutoUpdate.Size = new System.Drawing.Size(709, 19);
             this.AutoUpdate.TabIndex = 16;
             this.AutoUpdate.Text = "Автообновление списка каждые 10 сек";
             this.AutoUpdate.UseVisualStyleBackColor = true;
@@ -128,7 +132,7 @@ namespace RDP_Shadow_Framework
             this.checkControl.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.checkControl.Location = new System.Drawing.Point(0, 623);
             this.checkControl.Name = "checkControl";
-            this.checkControl.Size = new System.Drawing.Size(405, 19);
+            this.checkControl.Size = new System.Drawing.Size(709, 19);
             this.checkControl.TabIndex = 17;
             this.checkControl.Text = "Управление";
             this.checkControl.UseVisualStyleBackColor = true;
@@ -139,17 +143,29 @@ namespace RDP_Shadow_Framework
             this.serverComboBox.FormattingEnabled = true;
             this.serverComboBox.Location = new System.Drawing.Point(0, 581);
             this.serverComboBox.Name = "serverComboBox";
-            this.serverComboBox.Size = new System.Drawing.Size(405, 23);
+            this.serverComboBox.Size = new System.Drawing.Size(709, 23);
             this.serverComboBox.TabIndex = 19;
             this.serverComboBox.Text = "Ваш сервер";
             this.serverComboBox.SelectedIndexChanged += new System.EventHandler(this.refreshButton_Click_1);
+            // 
+            // Email
+            // 
+            this.Email.DisplayIndex = 3;
+            this.Email.Text = "E-mail";
+            this.Email.Width = 150;
+            // 
+            // OfficePhone
+            // 
+            this.OfficePhone.DisplayIndex = 4;
+            this.OfficePhone.Text = "Телефон";
+            this.OfficePhone.Width = 150;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(405, 703);
+            this.ClientSize = new System.Drawing.Size(709, 703);
             this.Controls.Add(this.serverComboBox);
             this.Controls.Add(this.AutoUpdate);
             this.Controls.Add(this.checkControl);
@@ -181,6 +197,8 @@ namespace RDP_Shadow_Framework
         private ColumnHeader columnHeader2;
         private CheckBox checkControl;
         private ComboBox serverComboBox;
+        private ColumnHeader Email;
+        private ColumnHeader OfficePhone;
     }
 }
 

@@ -52,18 +52,25 @@ namespace RDP_Shadow_Framework
             }
         }
 
-        private string GetFullNameByLogin(string login)
+        private string GetInfoByLogin(string login, string Finder)
         {
             using (var entry = new DirectoryEntry($"LDAP://{stDomen}"))
             {
                 using (var search = new DirectorySearcher(entry))
                 {
                     search.Filter = $"(&(objectClass=user)(sAMAccountName={login}))";
-                    search.PropertiesToLoad.Add("displayName");
+                    search.PropertiesToLoad.Add(Finder);
                     var result = search.FindOne();
                     if (result != null)
                     {
-                        return result.Properties["displayName"][0].ToString();
+                        try
+                        {
+                            return result.Properties[Finder][0].ToString();
+                        }
+                        catch (Exception)
+                        {
+                            return "";
+                        }  
                     }
                     else
                     {
@@ -72,6 +79,7 @@ namespace RDP_Shadow_Framework
                 }
             }
         }
+
         public void RefreshSessionList()
         {
             // Создаем словарь, где ключ - идентификатор сессии, а значение - элемент списка
@@ -137,8 +145,12 @@ namespace RDP_Shadow_Framework
 
                         // Получаем ФИО пользователя и добавляем его в колонку списка
                         string login = fields[1].Substring(fields[1].IndexOf("\\") + 1);
-                        string fullName = GetFullNameByLogin(login);
+                        string fullName = GetInfoByLogin(login, "displayName");
                         item.SubItems.Add(fullName);
+                        string Email = GetInfoByLogin(login, "mail");
+                        item.SubItems.Add(Email);
+                        string OfficePhone = GetInfoByLogin(login, "telephoneNumber");
+                        item.SubItems.Add(OfficePhone);
 
                         sessionListView.Items.Add(item);
                     }
