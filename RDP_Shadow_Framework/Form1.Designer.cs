@@ -179,7 +179,7 @@ namespace RDP_Shadow_Framework
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(421, 742);
             this.Name = "Form1";
-            this.Text = "Запаска RDP";
+            this.Text = "Shadow RDP";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
