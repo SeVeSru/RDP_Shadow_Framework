@@ -106,8 +106,8 @@ namespace RDP_Shadow_Framework
             process.StartInfo.CreateNoWindow = true;
             string output = "";
             process.Start();
-            bool processExited = process.WaitForExit(5000); // ожидание 5 секунд
-            if (processExited)
+            //bool processExited = process.WaitForExit(5*1000); // ожидание 5 секунд
+            if (true)
             {
                 output = process.StandardOutput.ReadToEnd();
             }

@@ -36,13 +36,13 @@ namespace RDP_Shadow_Framework
             this.SessionID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OfficePhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.refreshButton = new System.Windows.Forms.Button();
             this.shadowButton = new System.Windows.Forms.Button();
             this.AutoUpdate = new System.Windows.Forms.CheckBox();
             this.checkControl = new System.Windows.Forms.CheckBox();
             this.serverComboBox = new System.Windows.Forms.ComboBox();
-            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.OfficePhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // sessionListView
@@ -88,6 +88,18 @@ namespace RDP_Shadow_Framework
             this.columnHeader2.DisplayIndex = 2;
             this.columnHeader2.Text = "ФИО";
             this.columnHeader2.Width = 300;
+            // 
+            // Email
+            // 
+            this.Email.DisplayIndex = 3;
+            this.Email.Text = "E-mail";
+            this.Email.Width = 150;
+            // 
+            // OfficePhone
+            // 
+            this.OfficePhone.DisplayIndex = 4;
+            this.OfficePhone.Text = "Телефон";
+            this.OfficePhone.Width = 150;
             // 
             // refreshButton
             // 
@@ -147,18 +159,6 @@ namespace RDP_Shadow_Framework
             this.serverComboBox.TabIndex = 19;
             this.serverComboBox.Text = "Ваш сервер";
             this.serverComboBox.SelectedIndexChanged += new System.EventHandler(this.refreshButton_Click_1);
-            // 
-            // Email
-            // 
-            this.Email.DisplayIndex = 3;
-            this.Email.Text = "E-mail";
-            this.Email.Width = 150;
-            // 
-            // OfficePhone
-            // 
-            this.OfficePhone.DisplayIndex = 4;
-            this.OfficePhone.Text = "Телефон";
-            this.OfficePhone.Width = 150;
             // 
             // Form1
             // 
